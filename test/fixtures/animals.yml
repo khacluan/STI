@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tribe_id: 1
+  name: MyString
+  kind: MyString
+
+two:
+  tribe_id: 1
+  name: MyString
+  kind: MyString

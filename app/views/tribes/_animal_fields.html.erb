@@ -1,0 +1,7 @@
+<%-if f.object.kind == 'Lion'-%>
+  <%= render 'lion_fields', :f => f %>
+<%-elsif f.object.kind == 'Dog'-%>
+  <%= render 'dog_fields', :f => f %>
+<%-elsif f.object.kind == 'Duck'-%>
+  <%= render 'duck_fields', :f => f %>
+<%-end-%>

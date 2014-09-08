@@ -1,0 +1,18 @@
+<%= simple_form_for @tribe do |f| %>
+  <%= f.hidden_field :id %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <%= f.simple_fields_for :animals do |animal|%>
+    <%= render 'animal_fields', :f => animal %>
+    <%= link_to_add_association 'Add a Lion', f, :animals, :wrap_object => Proc.new { |item| item = Lion.new } %>
+    <%= link_to_add_association 'Add an Dog', f, :animals, :wrap_object => Proc.new { |item| item = Dog.new } %>
+    <%= link_to_add_association 'Add a Duck', f, :animals, :wrap_object => Proc.new { |item| item = Duck.new } %>
+  <% end %>
+
+  <div>
+    <%= f.submit 'Save' %>
+  </div>
+<% end %>
